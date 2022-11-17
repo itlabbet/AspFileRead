@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="data\data.md" />
-    <Content Include="secret\secret.txt" />
+    <None Include="secret\secret.md" />
     <Content Include="Web.config" />
     <Content Include="WebForm.aspx" />
   </ItemGroup>
@@ -106,7 +106,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50034</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44318/WebForm.aspx?file=</IISUrl>
+          <IISUrl>https://localhost:44318/WebForm.aspx?file=data</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
